@@ -15,6 +15,28 @@ def deps do
 end
 ```
 
+## Requirements
+
+- Erlang 22+
+- Elixir 1.13+
+
+## API Documentation
+
+https://docs.x2y2.io/developers/api
+
+## REST API
+
+#### Orders
+
+- [ ] `GET /api/orders`
+- [ ] `POST /api/orders/sign`
+- [ ] `POST /api/orders/cancel`
+- [ ] `POST /api/orders/add`
+
+#### Contracts
+
+- [ ] `POST /api/contracts/payment_info`
+
 ## Authors
 
 - Alex Kwiatkowski - alex+git@fremantle.io

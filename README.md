@@ -37,6 +37,10 @@ https://docs.x2y2.io/developers/api
 
 - [ ] `POST /api/contracts/payment_info`
 
+#### Events
+
+- [x] `GET /v1/events`
+
 ## Authors
 
 - Alex Kwiatkowski - alex+git@fremantle.io

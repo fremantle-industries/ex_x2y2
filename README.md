@@ -1,4 +1,5 @@
 # ExX2Y2
+[![Build Status](https://github.com/fremantle-industries/ex_x2y2/workflows/test/badge.svg?branch=main)](https://github.com/fremantle-industries/ex_x2y2/actions?query=workflow%3Atest)
 [![hex.pm version](https://img.shields.io/hexpm/v/ex_x2y2.svg?style=flat)](https://hex.pm/packages/ex_x2y2)
 
 X2Y2 API client for Elixir

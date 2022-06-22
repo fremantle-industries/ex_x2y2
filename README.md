@@ -21,11 +21,21 @@ end
 - Erlang 22+
 - Elixir 1.13+
 
-## API Documentation
+## REST API
+
+https://x2y2-io.github.io/api-reference
+
+#### Orders
+
+- [x] `GET /v1/orders`
+
+#### Events
+
+- [x] `GET /v1/events`
+
+## Legacy REST API
 
 https://docs.x2y2.io/developers/api
-
-## REST API
 
 #### Orders
 
@@ -37,10 +47,6 @@ https://docs.x2y2.io/developers/api
 #### Contracts
 
 - [ ] `POST /api/contracts/payment_info`
-
-#### Events
-
-- [x] `GET /v1/events`
 
 ## Authors
 

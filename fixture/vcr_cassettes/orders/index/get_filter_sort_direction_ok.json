@@ -1,0 +1,66 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "X-API-KEY": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.x2y2.org/v1/orders?direction=asc&limit=2"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"created_at\":1644047280,\"currency\":\"0x0000000000000000000000000000000000000000\",\"end_at\":1659599276,\"id\":254,\"is_bundle\":false,\"is_collection_offer\":false,\"item_hash\":\"0x97dfc971adedfe1272c91c93f57861a618bc206e2c078eb53e26659ef4dea4a9\",\"maker\":\"0x62682982afb10010629d15f2f27d752d07673fbb\",\"price\":\"888000000000000000000\",\"side\":1,\"status\":\"open\",\"taker\":null,\"token\":{\"contract\":\"0x67d9417c9c3c250f61a83c7e8658dac487b56b09\",\"token_id\":\"8127\"},\"type\":\"sell\",\"updated_at\":1646314316},{\"created_at\":1644050462,\"currency\":\"0x0000000000000000000000000000000000000000\",\"end_at\":1659602459,\"id\":300,\"is_bundle\":false,\"is_collection_offer\":false,\"item_hash\":\"0xce8689b4b3e1bbb48e1d727dff09d7b15a19e3d155c073a78f6bedf9567611a3\",\"maker\":\"0xcf302cebde84948d5752e25cec50d6453329fb4b\",\"price\":\"10000000000000000000\",\"side\":1,\"status\":\"open\",\"taker\":null,\"token\":{\"contract\":\"0x48ca05b6d3f56e80a5b18d64b52df0859b7729e1\",\"token_id\":\"472\"},\"type\":\"sell\",\"updated_at\":1646314316}],\"next\":\"WzE2NDQwNTA0NjIwMDBd\",\"success\":true}\n",
+      "headers": {
+        "Date": "Wed, 22 Jun 2022 16:02:39 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "1020",
+        "Connection": "keep-alive",
+        "x-envoy-attempt-count": "1",
+        "x-envoy-upstream-service-time": "22",
+        "CF-Cache-Status": "DYNAMIC",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DR2cBsvX3rdiX3Z8VS9A7RvenSMPEwqkDS%2FKSXAi3ni13JRdZp8BasJzUtBLytVOmLlw%2BiD0V9QPLgU7KI3DIVWM6Q0DkNSMJHmAR%2BMN%2F7qgBhpV%2Fb5g6cyOcYmB7g4%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+        "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+        "Server": "cloudflare",
+        "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "X-API-KEY": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.x2y2.org/v1/orders?direction=desc&limit=2"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"created_at\":1655913750,\"currency\":\"0x0000000000000000000000000000000000000000\",\"end_at\":1655917329,\"id\":3105753,\"is_bundle\":false,\"is_collection_offer\":false,\"item_hash\":\"0xbbdb5e1f073065cee14319e70bb57f517e66212003058021fbab1c488f20e98a\",\"maker\":\"0xdacf9f97b048eb870043af2cf7243e80dad18dcb\",\"price\":\"5000000000000000000\",\"side\":1,\"status\":\"open\",\"taker\":null,\"token\":{\"contract\":\"0x2ee6af0dff3a1ce3f7e3414c52c48fd50d73691e\",\"token_id\":\"3096\"},\"type\":\"sell\",\"updated_at\":1655913750},{\"created_at\":1655913747,\"currency\":\"0x0000000000000000000000000000000000000000\",\"end_at\":1658505545,\"id\":3105752,\"is_bundle\":false,\"is_collection_offer\":false,\"item_hash\":\"0x2addbfa833bdab5b2f06ebd4351dd5da5aba1876a42f18f135de54c7a9b2aab0\",\"maker\":\"0xcc63e4faf674577a42615ba4ab9304a48cd2559c\",\"price\":\"100000000000000000\",\"side\":1,\"status\":\"open\",\"taker\":null,\"token\":{\"contract\":\"0xebbb641dfe14805939b6cc25d2a90c93bd6a2021\",\"token_id\":\"2969\"},\"type\":\"sell\",\"updated_at\":1655913747}],\"next\":\"WzE2NTU5MTM3NDcwMDBd\",\"success\":true}\n",
+      "headers": {
+        "Date": "Wed, 22 Jun 2022 16:02:39 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "1025",
+        "Connection": "keep-alive",
+        "x-envoy-attempt-count": "1",
+        "x-envoy-upstream-service-time": "47",
+        "CF-Cache-Status": "DYNAMIC",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=sF%2FBM9khbnv3z%2BpzuYRqyAxJHBr7RT4gUOJZL7F0oKW7AlKYT9nceXiaQdxaR7fqL%2FyAClTU3qzip9mjYBaqBHgER%2FgLpF0jw%2FOCwVzKWyWTim9YPmwxtRivUviwJ%2Bs%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+        "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+        "Server": "cloudflare",
+        "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

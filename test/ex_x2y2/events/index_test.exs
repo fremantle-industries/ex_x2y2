@@ -21,7 +21,7 @@ defmodule ExX2Y2.Events.IndexTest do
   test ".get/1 returns an event page cursor" do
     use_cassette "events/index/get_ok" do
       assert {:ok, cursor} = Index.get(@api_key)
-      assert %ExX2Y2.EventPageCursor{} = cursor
+      assert %ExX2Y2.PageCursor{} = cursor
       assert length(cursor.data) > 1
     end
   end

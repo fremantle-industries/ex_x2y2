@@ -103,15 +103,14 @@ defmodule ExX2Y2.Events.IndexTest do
     end
   end
 
-  @tag :skip
   test ".get/1 can filter by created_after" do
     created_after = 1_655_142_926
 
     use_cassette "events/index/get_filter_by_created_after_ok" do
-      assert {:ok, cursor} = Index.get(@api_key, %{created_after: created_after})
+      assert {:ok, cursor} = Index.get(@api_key, %{created_after: created_after, type: @default_type})
 
       assert length(cursor.data) > 1
-      assert Enum.all?(cursor.data, &(&1["created_at"] < created_after)) == true
+      assert Enum.all?(cursor.data, &(&1["created_at"] > created_after)) == true
     end
   end
 

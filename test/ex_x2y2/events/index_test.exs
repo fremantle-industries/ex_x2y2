@@ -28,7 +28,7 @@ defmodule ExX2Y2.Events.IndexTest do
 
   test ".get/1 can limit the number of results returned" do
     use_cassette "events/index/get_filter_limit_ok" do
-      assert {:ok, cursor} = ExX2Y2.Events.Index.get(@api_key, %{limit: 1})
+      assert {:ok, cursor} = Index.get(@api_key, %{limit: 1})
       assert length(cursor.data) == 1
     end
   end

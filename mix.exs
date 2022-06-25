@@ -4,7 +4,7 @@ defmodule ExX2y2.MixProject do
   def project do
     [
       app: :ex_x2y2,
-      version: "0.0.2",
+      version: "0.0.3",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),

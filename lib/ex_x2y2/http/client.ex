@@ -7,13 +7,13 @@ defmodule ExX2Y2.Http.Client do
   @type result :: {:ok, data} | {:error, error_reason}
 
   @spec rest_domain :: String.t()
-  def rest_domain, do: Application.get_env(:ex_magic_eden, :rest_domain, "api.x2y2.org")
+  def rest_domain, do: Application.get_env(:ex_x2y2, :rest_domain, "api.x2y2.org")
 
   @spec protocol :: String.t()
-  def protocol, do: Application.get_env(:ex_magic_eden, :protocol, "https")
+  def protocol, do: Application.get_env(:ex_x2y2, :protocol, "https")
 
   @spec adapter :: module
-  def adapter, do: Application.get_env(:ex_magic_eden, :adapter, Http.HTTPoisonAdapter)
+  def adapter, do: Application.get_env(:ex_x2y2, :adapter, Http.HTTPoisonAdapter)
 
   @spec get(request) :: result
   def get(request) do

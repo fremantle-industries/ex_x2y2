@@ -33,6 +33,15 @@ https://x2y2-io.github.io/api-reference
 
 - [x] `GET /v1/events`
 
+#### Offers
+
+- [ ] `GET /v1/offers`
+
+#### Contracts
+
+- [ ] `GET /v1/contracts/{contract}`
+- [ ] `GET /v1/contracts/{contract}/stats`
+
 ## Legacy REST API
 
 https://docs.x2y2.io/developers/api

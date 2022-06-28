@@ -78,18 +78,18 @@ defmodule ExX2Y2.Events.IndexTest do
     end
   end
 
-  @tag :skip
   test ".get/1 can filter by the token id of a contract" do
     contract_address = "0xbce3781ae7ca1a5e050bd9c4c77369867ebc307e"
     token_id = 2260
+    type = "list"
 
     use_cassette "events/index/get_filter_by_token_id_ok" do
-      assert {:ok, cursor} =
-               Index.get(@api_key, %{contract: contract_address, token_id: token_id})
+      params = %{contract: contract_address, token_id: token_id, type: type}
+      assert {:ok, cursor} = Index.get(@api_key, params)
 
       assert length(cursor.data) > 1
       assert Enum.all?(cursor.data, &(&1["token"]["contract"] == contract_address)) == true
-      assert Enum.all?(cursor.data, &(&1["token"]["id"] == token_id)) == true
+      assert Enum.all?(cursor.data, &(&1["token"]["token_id"] == "#{token_id}")) == true
     end
   end
 

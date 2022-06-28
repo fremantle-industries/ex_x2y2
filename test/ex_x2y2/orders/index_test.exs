@@ -90,17 +90,16 @@ defmodule ExX2Y2.Orders.IndexTest do
     end
   end
 
-  @tag :skip
   test ".get/1 can filter by token id" do
     contract_address = "0xbce3781ae7ca1a5e050bd9c4c77369867ebc307e"
-    token_id = 8041
+    token_id = 9666
 
     use_cassette "orders/index/get_filter_token_id_ok" do
       assert {:ok, cursor} =
                Index.get(@api_key, %{contract: contract_address, token_id: token_id})
 
-      assert length(cursor.data) > 1
-      assert Enum.all?(cursor.data, &(&1["token"]["token_id"] == token_id)) == true
+      assert length(cursor.data) >= 1
+      assert Enum.all?(cursor.data, &(&1["token"]["token_id"] == "#{token_id}")) == true
     end
   end
 

@@ -6,6 +6,7 @@ defmodule ExX2Y2.Events.IndexTest do
   doctest ExX2Y2.Events.Index
 
   @api_key System.get_env("X2Y2_API_KEY")
+  @default_type "list"
 
   defmodule ErrorAdapter do
     def send(_request) do
@@ -20,7 +21,7 @@ defmodule ExX2Y2.Events.IndexTest do
 
   test ".get/1 returns an event page cursor" do
     use_cassette "events/index/get_ok" do
-      assert {:ok, cursor} = Index.get(@api_key)
+      assert {:ok, cursor} = Index.get(@api_key, %{type: @default_type})
       assert %ExX2Y2.PageCursor{} = cursor
       assert length(cursor.data) > 1
     end
@@ -28,17 +29,16 @@ defmodule ExX2Y2.Events.IndexTest do
 
   test ".get/1 can limit the number of results returned" do
     use_cassette "events/index/get_filter_limit_ok" do
-      assert {:ok, cursor} = Index.get(@api_key, %{limit: 1})
+      assert {:ok, cursor} = Index.get(@api_key, %{limit: 1, type: @default_type})
       assert length(cursor.data) == 1
     end
   end
 
-  @tag :skip
   test ".get/1 can filter by from_address" do
     from_address = "0x85472981e13c7cd11df52f21e69493353e1c6d87"
 
     use_cassette "events/index/get_filter_by_from_address_ok" do
-      assert {:ok, cursor} = Index.get(@api_key, %{from_address: from_address})
+      assert {:ok, cursor} = Index.get(@api_key, %{from_address: from_address, type: @default_type})
 
       assert length(cursor.data) > 1
       assert Enum.all?(cursor.data, &(&1["from_address"] == from_address)) == true
@@ -60,7 +60,7 @@ defmodule ExX2Y2.Events.IndexTest do
     contract_address = "0xbce3781ae7ca1a5e050bd9c4c77369867ebc307e"
 
     use_cassette "events/index/get_filter_by_contract_address_ok" do
-      assert {:ok, cursor} = Index.get(@api_key, %{contract: contract_address})
+      assert {:ok, cursor} = Index.get(@api_key, %{contract: contract_address, type: @default_type})
 
       assert length(cursor.data) > 1
       assert Enum.all?(cursor.data, &(&1["token"]["contract"] == contract_address)) == true
@@ -81,10 +81,9 @@ defmodule ExX2Y2.Events.IndexTest do
   test ".get/1 can filter by the token id of a contract" do
     contract_address = "0xbce3781ae7ca1a5e050bd9c4c77369867ebc307e"
     token_id = 2260
-    type = "list"
 
     use_cassette "events/index/get_filter_by_token_id_ok" do
-      params = %{contract: contract_address, token_id: token_id, type: type}
+      params = %{contract: contract_address, token_id: token_id, type: @default_type}
       assert {:ok, cursor} = Index.get(@api_key, params)
 
       assert length(cursor.data) > 1

@@ -8,21 +8,21 @@
       "method": "get",
       "options": [],
       "request_body": "",
-      "url": "https://api.x2y2.org/v1/events?limit=1"
+      "url": "https://api.x2y2.org/v1/events?limit=1&type=list"
     },
     "response": {
       "binary": false,
-      "body": "{\"data\":[{\"created_at\":1643981184,\"from_address\":\"0x2794731a276e4446809e06c45c859797542d7d7f\",\"id\":1,\"order\":{\"created_at\":1643981184,\"currency\":\"0x0000000000000000000000000000000000000000\",\"end_at\":1644240357,\"id\":1,\"is_bundle\":false,\"item_hash\":\"0xf883fdf2cf1610249c0148c8d1abef2f6c580e676bb458e9b8955e6fc9eb05f9\",\"maker\":\"0x2794731a276e4446809e06c45c859797542d7d7f\",\"price\":\"6500000000000000000\",\"side\":1,\"status\":\"cancelled\",\"taker\":null,\"type\":\"sell\",\"updated_at\":1646314316},\"to_address\":null,\"token\":{\"contract\":\"0x08ba8cbbefa64aaf9df25e57fe3f15ecc277af74\",\"token_id\":\"202\"},\"tx\":null,\"type\":\"offer_listing\"}],\"next\":\"WzE2NDM5ODExODRd\",\"success\":true}\n",
+      "body": "{\"data\":[{\"created_at\":1643981184,\"from_address\":\"0x2794731a276e4446809e06c45c859797542d7d7f\",\"id\":1,\"order\":{\"created_at\":1643981184,\"currency\":\"0x0000000000000000000000000000000000000000\",\"end_at\":1644240357,\"id\":1,\"is_bundle\":false,\"is_collection_offer\":false,\"item_hash\":\"0xf883fdf2cf1610249c0148c8d1abef2f6c580e676bb458e9b8955e6fc9eb05f9\",\"maker\":\"0x2794731a276e4446809e06c45c859797542d7d7f\",\"price\":\"6500000000000000000\",\"side\":1,\"status\":\"cancelled\",\"taker\":null,\"type\":\"sell\",\"updated_at\":1646314316},\"to_address\":null,\"token\":{\"contract\":\"0x08ba8cbbefa64aaf9df25e57fe3f15ecc277af74\",\"token_id\":\"202\"},\"tx\":null,\"type\":\"list\"}],\"next\":\"WzE2NDM5ODExODRd\",\"success\":true}\n",
       "headers": {
-        "Date": "Sun, 19 Jun 2022 17:49:02 GMT",
+        "Date": "Tue, 28 Jun 2022 05:52:34 GMT",
         "Content-Type": "application/json",
-        "Content-Length": "659",
+        "Content-Length": "678",
         "Connection": "keep-alive",
         "x-envoy-attempt-count": "1",
-        "x-envoy-upstream-service-time": "22",
+        "x-envoy-upstream-service-time": "30",
         "CF-Cache-Status": "DYNAMIC",
         "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
-        "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Eo%2BEBVhwR8Hf41mULQZ3ElaDLIWCY0ujDvn88sXJMjsAgNpQXCwHEIK8VZHAFc8dUAm3fucnR87M%2FO9JpDDkoqVry6ZdVEdc01zXogSkNm2zZZc9WWhKdeVSU0mbCK4%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+        "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=BTG69BYe1bt5dTgCSt15Z537xaWshI9J7SSQs8zQs0IVfyKH5U8walNG0Bh%2FmoyPTTJ99iKBGm6RO0qdLCTo%2Bt6iN2k0b7fnBr9tPX3Y%2B7%2FhLUuGMjeEtOZCiZCp6pU%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
         "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
         "Server": "cloudflare",
         "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
